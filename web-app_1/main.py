@@ -6,7 +6,7 @@ import numpy as np
 from util import classify, set_background
 
 
-set_background('./web-app_1/bgs/bg.png')
+set_background('./bg.png')
 
 # set title
 st.markdown('<h1 style="color: white;">Disease Detection in Orange Fruit</h1>', unsafe_allow_html=True)
