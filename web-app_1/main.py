@@ -2,7 +2,9 @@ import streamlit as st
 from keras.models import load_model
 from PIL import Image
 import numpy as np
-
+import subprocess
+if not os.path.isfile('model.h5'):
+    subprocess.run(['curl --output model.h5 "https://media.githubusercontent.com/media/ShyamaleeT/glaucocare/main/sep_5.h5"'], shell=True)
 from util import classify, set_background
 
 
