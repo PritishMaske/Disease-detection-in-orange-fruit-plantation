@@ -6,7 +6,7 @@ import numpy as np
 from util import classify, set_background
 
 
-set_background('./bgs/bg.png')
+set_background('./web-app_1/bgs/bg.png')
 
 # set title
 st.markdown('<h1 style="color: white;">Disease Detection in Orange Fruit</h1>', unsafe_allow_html=True)
@@ -18,10 +18,10 @@ st.markdown('<h2 style="color: white;">Please upload image</h2>', unsafe_allow_h
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
 # load classifier
-model = load_model('./model/training_of_leaves.h5')
+model = load_model('./web-app_1/model/training_of_leaves.h5')
 
 # load class names
-with open('./model/labels.txt', 'r') as f:
+with open('./web-app_1/model/labels.txt', 'r') as f:
     class_names = [a[:-1].split(' ')[1] for a in f.readlines()]
     f.close()
 
